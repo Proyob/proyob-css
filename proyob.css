@@ -1,0 +1,52 @@
+/* Don't lose something important */
+
+body::before {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  font-size: 2em;
+  color: #f00;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 9999;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+html:not(:has(title)) > body::before {
+  content: "You forgot to tag Title";
+}
+
+html:has(title:empty) > body::before {
+  content: "Your Title tag is empty";
+}
+
+html:not(:has(meta[name="description"])) > body::before {
+  content: "You forgot <meta description> attribute";
+}
+
+html:has( meta[name="description"][content=""]) > body::before {
+  content: "Your <meta description> is empty";
+}
+
+body:not(:has(h1))::before {
+  content: 'You forgot <h1> for your page';
+}
+
+html:has(h1:empty) > body::before {
+  content: 'Your forgot text for <h1>'; 
+}
+
+body:has(h1:nth-of-type(2))::before {
+  content: 'You have several h1 on a page';
+}
+
+img:not([alt]),
+img[alt=""],
+img[alt=" "] {
+  border: 6px dashed lime !important;
+}
+
+div[style]{
+  background-color: rgba(255,0,0, 0.8);
+}
