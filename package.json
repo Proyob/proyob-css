@@ -1,6 +1,6 @@
 {
   "name": "proyob-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Analyze your CSS for semantic compliance, make your CSS seo-friendly",
   "main": "lib/proyob.js",
   "keywords": [
@@ -16,6 +16,6 @@
   "author": "Zirka Andry <zirkaandry@gmial.com>",
   "license": "MIT",
   "devDependencies": {
-    "browserslist": "^4.21.4",
-  },
+    "browserslist": "^4.21.4"
+  }
 }
